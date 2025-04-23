@@ -45,12 +45,24 @@ svg {
 }
 
 @font-face {
-    font-family: default-font;
-    src: url(/assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format(truetype);
+    font-family: "HG-bold";
+    src: url(/assets/fonts/static/HankenGrotesk-Bold.ttf) format(truetype);
     /* font-face rules... first define a name for the font-family, then add the source below. */
     /* optional additions to @font-face: font-stretch, font-style, font-weight */
     font-display: swap;
     /* swap is for performance reasons...?  */
+}
+
+@font-face {
+    font-family: "HG-extra-bold";
+    src: url(/assets/fonts/static/HankenGrotesk-ExtraBold.ttf) format(truetype);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "HG-medium";
+    src: url(/assets/fonts/static/HankenGrotesk-Medium.ttf) format(truetype);
+    font-display: swap;
 }
 
 p {
@@ -60,7 +72,7 @@ p {
 body {
     font-size: medium;
     font-weight: var(--fw-regular);
-    /* font-family: var(--font-family-default-font); */
+    font-family: "HG-medium";
 }
 
 /* Desktop */
@@ -94,8 +106,9 @@ body {
 }
 
 .card-title {
-    font-size: large;
+    font-size: 1.4rem;
     font-weight: var(--fw-bold);
+    font-family: "HG-bold";
 }
 
 .grid-flow {
@@ -150,7 +163,7 @@ body {
 .results-rank {
     color: var(--white-bg);
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 
