@@ -45,11 +45,11 @@ This challenge involved HTML & CSS to create a responsive design of the Results 
 
 
 ### What I learned
-I learned quite a bit from this project.  I intentionally left my comments in my code to review while I was working on the project, which I found very helpful.  My favorite concepts were setting up & utilizing the variables, learning which spacing unit to use relative to the parent/child, using attributes (eg. data-spacing), how to create background transparency, and learning about gradients. I took the time to follow along with Kevin Powell's Results video and learn along the way. 
+I learned quite a bit from this project.  I intentionally left my comments in my code to review while I was working on the project, which I found very helpful.  My favorite concepts were setting up & utilizing the variables, learning which spacing unit to use relative to the parent/child, using attributes (eg. data-spacing), how to create background transparency, implementing variable fonts, and learning about gradients. I took the time to follow along with Kevin Powell's Results video and learn along the way. 
 
 
 ### Continued development
-I'd like to continue working on learning responsive web development, nesting variables more effectively, and incorporating variable fonts into projects.
+I'd like to continue working on learning responsive web development and nesting variables more effectively.
 
 
 ### Useful resources
