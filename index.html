@@ -4,55 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Results Component</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
     <main>
         <div class="results-summary">
             <!-- Results Card -->
-            <div class="results grid-flow"> 
-                    <!-- add a modifier class in CSS -->
-                <h1 class="card-title">Your Results</h1>
-                <p class="result-score"><span>76</span> of 100</p> 
+            <div class="results grid-flow" data-spacing="large"> 
+                <!-- data-spacing is an attribute, not a modifier like class or ID -->
+                <h1 class="card-title">Your Result</h1>
+                <p class="results-score"><span>76</span> of 100</p> 
                     <!-- span is used since 76 could be dynamic changing data -->
                 <div class="grid-flow">
-                    <p class="result-rank">Great</p>
+                    <p class="results-rank">Great</p>
                     <p>You scored higher than 65% of the people who have taken these tests.</p>
                 </div>
             </div>
             
-            
+
             <!-- Summary Card -->
-            <div class="summary grid-flow">
+            <div class="summary grid-flow" data-spacing="large">
                 <h2 class="card-title">Summary</h2>
                 <!-- Summary items -->
                 <div class="grid-flow">
-                    <div class="summary-item">
-                        <div class="flex-group accent-1">
-                            <img class="summary-icon" src="assets/images/icon-reaction.svg" alt="lightening bolt icon">
-                            <h3 class="summary-item-title">Reaction</h3>
+                    <div class="summary-item accent-1">
+                        <div class="flex-group">
+                            <img class="summary-icon-1" src="assets/images/icon-reaction.svg" alt="lightening bolt icon">
+                            <h3 class="summary-item-title-1">Reaction</h3>
                         </div>    
                             <p class="summary-score"><span>80</span> / 100</p>
                     </div>
-                    <div class="summary-item">
-                        <div class="flex-group accent-2">
-                            <img class="summary-icon" src="assets/images/icon-memory.svg" alt="brain icon">
-                            <h3 class="summary-item-title">Memory</h3>
+                    <div class="summary-item accent-2">
+                        <div class="flex-group">
+                            <img class="summary-icon-2" src="assets/images/icon-memory.svg" alt="brain icon">
+                            <h3 class="summary-item-title-2">Memory</h3>
                         </div>    
                             <p class="summary-score"><span>92</span> / 100</p>
                     </div>
-                    <div class="summary-item">
-                        <div class="flex-group accent-3">
-                            <img class="summary-icon" src="assets/images/icon-verbal.svg" alt="chat icon">
-                            <h3 class="summary-item-title">Verbal</h3>
+                    <div class="summary-item accent-3">
+                        <div class="flex-group">
+                            <img class="summary-icon-3" src="assets/images/icon-verbal.svg" alt="chat icon">
+                            <h3 class="summary-item-title-3">Verbal</h3>
                         </div>    
                             <p class="summary-score"><span>61</span> / 100</p>
                     </div>
-                    <div class="summary-item">
-                        <div class="flex-group accent-4">
-                            <img class="summary-icon" src="assets/images/icon-visual.svg" alt="eye icon">
-                            <h3 class="summary-item-title">Visual</h3>
+                    <div class="summary-item accent-4">
+                        <div class="flex-group">
+                            <img class="summary-icon-4" src="assets/images/icon-visual.svg" alt="eye icon">
+                            <h3 class="summary-item-title-4">Visual</h3>
                         </div>    
                             <p class="summary-score"><span>73</span> / 100</p>
                     </div>  
