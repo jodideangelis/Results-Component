@@ -1,0 +1,251 @@
+:root {
+    --red: hsl(0, 100%, 67%);
+    --yellow: hsl(39, 100%, 56%);
+    --teal: hsl(166, 100%, 37%);
+    --blue: hsl(234, 85%, 45%);
+
+    --light-bg: hsl(252, 100%, 67%);
+    --dark-bg: hsl(241, 81%, 54%);
+
+    --light-circle: hsla(256, 72%, 46%, 1);
+    --dark-circle:hsla(241, 72%, 46%, 0);
+
+    --white-bg: hsl(0, 0%, 100%);
+    --blue-bg: hsl(221, 100%, 96%);
+    --lavender: hsl(241, 100%, 89%);
+    --button-blue: hsl(224, 30%, 27%);
+       
+    /* font weight */
+    --fw-regular: 500;
+    --fw-bold: 700;
+    --fw-black: 800;
+
+    /* nice to have these as variables so I don't have to adjust for each card. One change here instead. */
+    --border-radius: 2rem;
+    --padding: 2.5rem; 
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+    /* a reset */
+}
+
+*{
+    margin: 0;
+    font: inherit;
+    /* a reset - inherit to set all fonts to 1em, use classes to change fonts*/
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+    /* just good practice to use with every project! */
+}
+
+@font-face {
+    font-family: "HG-bold";
+    src: url(/assets/fonts/static/HankenGrotesk-Bold.ttf) format(truetype);
+    /* font-face rules... first define a name for the font-family, then add the source below. */
+    /* optional additions to @font-face: font-stretch, font-style, font-weight */
+    font-display: swap;
+    /* swap is for performance reasons...?  */
+}
+
+@font-face {
+    font-family: "HG-extra-bold";
+    src: url(/assets/fonts/static/HankenGrotesk-ExtraBold.ttf) format(truetype);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "HG-medium";
+    src: url(/assets/fonts/static/HankenGrotesk-Medium.ttf) format(truetype);
+    font-display: swap;
+}
+
+p {
+    font-size: 18px;
+}
+
+body {
+    font-size: medium;
+    font-weight: var(--fw-regular);
+    font-family: "HG-medium";
+}
+
+/* Desktop */
+@media (min-width: 600px) {
+    body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: var(--blue-bg);
+    }
+    .results-summary {
+        margin-inline: 1rem;
+        /* to give a small margin on right and left sides*/
+        grid-template-columns: 1fr 1fr;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        /* hides the overflow border-radius edges of child within parent */
+        box-shadow: 1px 5px 50px hsla(241, 94%, 48%, 0.174);
+    }
+    .results {
+        border-radius: var(--border-radius);
+    }
+}
+
+
+.results-summary {
+    max-width: 46rem;
+    display: grid;
+    border-radius: var(--border-radius);
+    background-color: var(--white-bg);
+}
+
+.card-title {
+    font-size: 1.4rem;
+    font-weight: var(--fw-bold);
+    font-family: "HG-bold";
+}
+
+.grid-flow {
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+    /* 1rem between summary items only */
+}
+
+.grid-flow[data-spacing="large"] {
+    gap: 2rem;
+    /* to make sure that the gap between parent (summary card) are 2rem and within the child (items) is only 1rem */
+    /* 2rem bewtween the title and summary items + button and summary items */
+}
+
+/* Mobile Results */
+.results {
+    color: var(--lavender);
+    text-align: center;
+    background-image: linear-gradient(to bottom, var(--light-bg), var(--dark-bg));
+    /* for gradient - (add direction, var(), var()) */
+    border-top-left-radius: 0;
+    /* I don't know why it only works without the border-top-right-radius of 0. ? */
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    padding: var(--padding) calc(var(--padding) *1.5);
+    /* use calc to multiply variable padding on left & right sides */
+}
+
+.results-score {
+    display: grid;
+    place-content: center;
+    /* make sure to use the correct one! place-content, place-items, etc. */
+    width: 12rem;
+    margin-inline: auto;
+    background-image: linear-gradient(to bottom, var(--light-circle), transparent);
+    aspect-ratio: 1 / 1;
+    /* to make a perfect circle */
+    border-radius: 50%;
+}
+
+.results-score span {
+    display: block;
+    /* to make sure the 76 is on a separate line from the "of 100" */
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1;
+    /* to keep the spacing between rows */
+    color: var(--white-bg);
+}
+
+.results-rank {
+    color: var(--white-bg);
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+
+/* Mobile Summary */
+.summary {
+    padding: var(--padding);
+    background-color: var(--white-bg);
+}
+
+.flex-group {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.accent-1 {
+    background-color: hsla(0, 100%, 67%, .1);
+    /* add "a" to hsl color + opacity of 0-1 as final number */
+} 
+
+.accent-2 {
+    background-color: hsla(39, 100%, 56%, .1);
+}
+
+.accent-3 {
+    background-color: hsla(166, 100%, 37%, .1);
+}
+
+.accent-4 {
+    background-color: hsla(234, 85%, 45%, .1);
+}
+
+.summary-icon-1,
+.summary-item-title-1 {
+    color: var(--red);
+}
+
+.summary-icon-2,
+.summary-item-title-2 {
+    color: var(--yellow);
+}
+
+.summary-icon-3,
+.summary-item-title-3 {
+    color: var(--teal);
+}
+
+.summary-icon-4,
+.summary-item-title-4 {
+    color: var(--blue);
+}
+
+.summary-score {
+    color: hsla(224, 30%, 27%, .5);
+}
+
+.summary-score span {
+    color: var(--button-blue);
+    font-weight: var(--fw-black);
+}
+
+.button {
+    color: var(--white-bg);
+    background-color: var(--button-blue);
+    line-height: 1;
+    padding: 1rem 2rem;
+    /* padding for the button shape */
+    border: none;
+    border-radius: 100vw;
+    cursor: pointer;
+}
+
+.button:hover,
+.button:focus-visible {
+    background-image: linear-gradient(to bottom, var(--light-bg), var(--dark-bg));
+}
